@@ -2,6 +2,17 @@
 @import "~edteam-style-guides/edteam-style-guides";
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
+body{
+  background: var(--dark-color-dark);
+  color:var(--grey-color-light);
+}
+
 h1,h2,h3,p,a{
   font-family: 'Poppins', sans-serif;
 }
+
+@media screen and (max-width: 1023px){
+  .main-menu { background:var(--dark-color-darkest);}
+}
+
+
