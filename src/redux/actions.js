@@ -6,7 +6,7 @@ export const GET_ALL_TEACHERS = "GET_ALL_TEACHERS"
 export const GET_POST = "GET_POST"
 export const GET_SPECIALITY = "GET_SPECIALITY"
 export const GET_COURSE = "GET_COURSE"
-export const GET_FRAGMENT = "GET_FRAGMEN"
+export const GET_FRAGMENT = "GET_FRAGMENT"
 
 
 

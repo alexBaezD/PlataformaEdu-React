@@ -13,6 +13,7 @@ import Page404 from './Pages/Page404'
 import Protected from './Routes/Protected'
 import Public from './Routes/Public';
 import Header from './Organisms/Header';
+import Footer from './Organisms/Footer';
 
 const App = ()=>(
   <Router>
@@ -20,9 +21,9 @@ const App = ()=>(
     <Switch>
       <Protected path="/" exact component={Home}/>
       <Protected path="/especialidades" exact component={Specialities}/>
-      <Protected path="/especialidades/:id"  component={Speciality}/>
+      <Protected path="/especialidad/:id"  component={Speciality}/>
       <Protected path="/cursos" exact component={Courses}/>
-      <Protected path="/cursos/:id"  component={Course}/>
+      <Protected path="/curso/:id"  component={Course}/>
       <Protected path="/profesores" exact component={Teachers}/>
       <Protected path="/clase/:id"  component={Fragment}/>
       
@@ -31,6 +32,7 @@ const App = ()=>(
 
       <Route component={Page404}/>
     </Switch>
+    <Footer/>
   </Router>
 )
 

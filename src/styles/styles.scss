@@ -2,15 +2,129 @@
 @import "~edteam-style-guides/edteam-style-guides";
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
+:root {
+  --gutter: 20px;
+}
+
 body{
   background: var(--dark-color-dark);
   color:var(--grey-color-light);
 }
 
-h1,h2,h3,p,a{
+h1,h2,h3,p,a,.t3,.t4{
   font-family: 'Poppins', sans-serif;
 }
 
+
+.dark-header{
+   background-color: var(--dark-color-darkest);
+   border:none;
+}
+
+.main-menu{ 
+  
+  & ul li {
+    border:none;
+  }
+
+  & ul li a{
+    color: var(--border-color);
+  }
+
+}
+
+.s-border {
+  border: 1px solid var(--text-color);
+}
+.card__data {
+  display: flex;
+  flex-direction: column;
+  background: var(--dark-color);
+  flex:1;
+  height: 80px;
+  & h3 a{
+    color:var(--body-bg);
+  }
+}
+.publication{
+  border-top: none;
+}
+
+.timer{
+  min-width: 115px;
+  border:1px solid var(--second-color);
+  color:var(--second-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.main-footer{
+  background: var(--dark-color-smooth);
+}
+
+/*
+.hs {
+  
+  con GRid
+   <ul class="hs">
+          <li class="item">test</li>
+          <li class="item">test</li>
+          <li class="item">test</li>
+          <li class="item">test</li>
+          <li class="item">test</li>
+          <li class="item">test</li>
+        </ul>
+  
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: repeat(6, calc(50% - var(--gutter) * 2));
+  grid-template-rows: minmax(150px, 1fr);
+  
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+hs > li,
+.item {
+  scroll-snap-align: center;
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+}*/
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 150px;
+  margin-bottom: 5px;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+}
+
+.card-course {
+  display: inline-block;
+  width: 250px;
+  height: 150px;
+  margin: 0 5px;
+  border-radius: 8px;
+}
+
+
+@media screen and (min-width: 1024px){
+.main-menu .active {
+    font-weight: 400;
+    color: var(--second-color);
+}
+}
 @media screen and (max-width: 1023px){
   .main-menu { background:var(--dark-color-darkest);}
 }

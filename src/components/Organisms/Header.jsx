@@ -8,7 +8,7 @@ const menu = createRef()
 const toggleMenu = ()=> menu.current.classList.toggle('show')
 
 const Header = () => (
-  <header className="main-header">
+  <header className="main-header dark-header">
     <div className="ed-grid s-grid-5 lg-grid-4">
       <div className="s-cols-4 lg-cols-1 s-cross-center" >
        <NavLink to="/">
