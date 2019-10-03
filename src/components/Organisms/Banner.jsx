@@ -27,7 +27,7 @@ const Banner = ({
                   Aprende ahora
                 </Link>
               </div>
-              <div className="img-container s-ratio-16-9">
+              <div className="img-container s-radius s-ratio-16-9">
                 <img src={poster} alt="Curso Actual" />
               </div>
             </div>

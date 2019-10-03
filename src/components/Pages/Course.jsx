@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import store from "../../redux/store";
 import {getCourse} from '../../redux/actionCreators' 
 import Banner from '../Organisms/Banner'
+import {Link} from 'react-router-dom'
+
 const Course = ({course}) => {
   
 useEffect(()=>{
@@ -54,7 +56,11 @@ useEffect(()=>{
                     <ul className="data-list">
                       {
                         cl.subjects.map(s=>(
-                          <li key={s.subject.id}>{s.subject.title}</li>
+                          <li key={s.subject.id}>
+                            <Link to={`/clase/${s.subject.id}`}>
+                              {s.subject.title}
+                            </Link>
+                          </li>
                         ))
                       }
                     </ul>

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import store from "../../redux/store";
 import { getSpeciality } from '../../redux/actionCreators';
 import Banner from '../Organisms/Banner'
+import {Link} from 'react-router-dom'
 
 const Speciality = ({speciality}) => {
  
@@ -62,9 +63,9 @@ const Speciality = ({speciality}) => {
                 speciality.data.courses.map(co =>(
                   <div key={co.id} className="course-class l-section">
                    <div className="ed-grid m-grid-3">
-                      <img src={co.picture} alt={co.name}/>
+                      <Link to={`/curso/${co.id}`}><img src={co.picture} alt={co.name}/></Link>
                       <div className="m-cols-2">
-                        <h3>{co.name}</h3>
+                        <Link to={`/curso/${co.id}`}><h3>{co.name}</h3></Link>
                         <p>{co.information}</p>
                       </div>
                    </div>
